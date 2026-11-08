@@ -4,6 +4,14 @@ All notable user-facing changes. Format: [Keep a Changelog](https://keepachangel
 Versions follow [Semantic Versioning](https://semver.org/). The saved-settings schema
 version is tracked separately (currently schema 1).
 
+## [0.1.0-rc.4] - 2026-11-08
+
+### Changed
+- Branded as part of the Elysium addon collection. The addon list, Options and
+  the configuration window show "[Elysium] SocialWheel", and the game's AddOns
+  list files it under an "Elysium" heading. The folder name, settings, key
+  binding and slash commands are unchanged, so existing installs upgrade in place.
+
 ## [0.1.0-rc.3] - 2026-11-08
 
 ### Added

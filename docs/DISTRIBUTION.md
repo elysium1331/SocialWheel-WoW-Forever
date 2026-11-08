@@ -6,7 +6,13 @@ below only once they are real.
 
 ## Name
 
-- **Proposed public name:** SocialWheel
+- **Brand:** Elysium. All of Ryan's WoW Forever addons are published as
+  "[Elysium] <Name>" by GitHub/CurseForge author elysium1331, with
+  `## Category: Elysium` in each TOC so they share one heading in the game's
+  AddOns list. Known overlap: "Elysium" was also the name of a vanilla WoW
+  private server (2016-2017). Ryan decided on 2026-11-08 to keep the brand anyway.
+- **Proposed public name:** [Elysium] SocialWheel (suggested CurseForge slug:
+  `elysium-socialwheel`)
 - **Folder / TOC name:** `SocialWheel`
 - **Name check (2026-11-08, not legal clearance):**
   - Wago Addons: `addons.wago.io/addons/socialwheel` returned 404 (no listing found).
@@ -51,7 +57,7 @@ Extract the zip into `World of Warcraft\_forever_\Interface\AddOns\`, bind
 
 ## Supported game version
 
-- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.1.0-rc.3**.
+- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.1.0-rc.4**.
 - Do not tag Retail, Classic Era, Anniversary or any other flavor until it has
   been tested there.
 
@@ -88,8 +94,8 @@ The zip from `python scripts/package.py` (`dist/SocialWheel-<version>.zip`) is
 already in the shape CurseForge expects: one `SocialWheel/` folder with the TOC
 inside, no extra wrapper folder, and no executables or development files.
 
-1. Check that the `socialwheel` project name is free on CurseForge (still unchecked).
-2. Create the project: name **SocialWheel**, the summary and description above,
+1. Check that the `elysium-socialwheel` slug and the name "[Elysium] SocialWheel" are free on CurseForge (still unchecked).
+2. Create the project: name **[Elysium] SocialWheel**, the summary and description above,
    license **MIT**, category as in the platform table.
 3. Upload the zip:
    - **Game version:** Forever 1.60.1 only.

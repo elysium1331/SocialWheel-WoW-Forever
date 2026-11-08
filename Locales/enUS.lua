@@ -3,7 +3,7 @@
 local _, ns = ...
 
 local L = {
-	ADDON_TITLE = "SocialWheel",
+	ADDON_TITLE = "[Elysium] SocialWheel",
 	BINDING_OPEN = "Open SocialWheel",
 
 	CHOOSE_EMOTE = "Choose an emote",
@@ -25,7 +25,7 @@ local L = {
 	MSG_NO_BINDING = "no key is bound yet. Set one in Options > Keybindings > AddOns > Open SocialWheel.",
 
 	-- Configuration window.
-	CONFIG_TITLE = "SocialWheel",
+	CONFIG_TITLE = "[Elysium] SocialWheel",
 	CONFIG_SLOT = "Slot %d",
 	CONFIG_EDITING = "Editing slot %d: %s",
 	CONFIG_PREVIEW_HINT = "Click a slot to edit it.",

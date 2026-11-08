@@ -1,8 +1,11 @@
-# SocialWheel
+# [Elysium] SocialWheel
+
+Part of the **Elysium** addon collection for WoW Forever by
+[elysium1331](https://github.com/elysium1331).
 
 Pick an emote from a six-slot wheel with one key, without typing a command.
 
-**Release:** 0.1.0-rc.3 (release candidate, partly tested in game; see
+**Release:** 0.1.0-rc.4 (release candidate, partly tested in game; see
 [docs/VALIDATION.md](docs/VALIDATION.md)).
 
 SocialWheel is an unofficial community addon. Blizzard Entertainment did not

@@ -1,4 +1,4 @@
-# Validation report: SocialWheel 0.1.0-rc.3
+# Validation report: SocialWheel 0.1.0-rc.4
 
 Target client: **WoW Forever 1.60.1.70862, interface 16001** (read from the local
 install's `.build.info`; the interface number matches community sources and the
@@ -73,7 +73,7 @@ Reported by Ryan for 0.1.0-rc.2 (screenshot):
 Reported by Ryan for 0.1.0-rc.3:
 - [x] Everything works in game after a plain `/reload`, including the new original icons.
 
-Still pending (run on rc.3):
+Still pending (run on rc.4):
 
 Do these on 1.60.1.70862 with `/console scriptErrors 1` enabled. Record pass or
 fail and the build number.
@@ -94,7 +94,7 @@ fail and the build number.
 14. [ ] Missing textures: temporarily add a bogus path to `Icons.BY_TOKEN.WAVE` and confirm the fallback icon shows, with no broken texture.
 15. [ ] Night Elf priest: Voice Emotes (Hello, Thank, Cheer, ...) play voice lines with sound on. Note any that are silent. Don't generalize to other races or body types.
 16. [ ] English client works. If another locale is available, emote names follow it and the UI falls back to English.
-17. [ ] Clean install from `dist/SocialWheel-0.1.0-rc.3.zip` into an empty AddOns folder.
+17. [ ] Clean install from `dist/SocialWheel-0.1.0-rc.4.zip` into an empty AddOns folder.
 18. [ ] Upgrade: put an old-shape `SocialWheel.lua` SavedVariables file in place (for example `SocialWheelCharDB = { slots = { "WAVE", "BOW" } }`) and confirm it migrates.
 19. [ ] Hold-and-release (experimental): releasing over a slot performs once; releasing in the dead zone cancels. If emotes fail on release, keep Click mode as the default and document it.
 20. [ ] `/swheel` and `/socialwheel` work, and `/socialwheel version` prints the build.
@@ -102,6 +102,7 @@ fail and the build number.
 22. [ ] Shift+Right-click on the open wheel closes it (no emote) and opens the configuration window.
 23. [ ] The one-time chat tip appears once per character and not after the next `/reload`.
 25. [x] rc.3 original icons render sharp and uncropped in the wheel, picker and catalog, with the round slot showing each whole symbol, and the AddOns list shows the speech-bubble icon.
+26. [ ] rc.4 branding: Esc > AddOns shows an "Elysium" heading containing "[Elysium] SocialWheel", and Options > AddOns and the config window use the same title.
 24. [x] New icons (Hello greeting figure, Thank handshake, Wave raised hand, Point arrow, Laugh grin, Cheer firework) render with no question marks.
 
 ## 4. Local installation performed
