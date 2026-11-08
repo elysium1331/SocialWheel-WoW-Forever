@@ -38,6 +38,9 @@ key press cancels, and nothing is performed.
 - Per-character settings. No dependencies. Does no automation: every emote
   comes from your own click.
 
+Icons: original artwork made with AI image generation (OpenAI, via Codex), then
+reviewed and edited by hand. Licensed MIT, the same as the code.
+
 Unofficial community addon, not affiliated with or endorsed by Blizzard Entertainment.
 
 ## Installation and basic use
@@ -78,6 +81,27 @@ None. No libraries are embedded.
 4. Options > Keybindings showing "Open SocialWheel" under AddOns.
 5. An empty slot and its "Empty" label.
 Use a neutral UI scale and crop personal names or chat if needed.
+
+## CurseForge upload (manual, done by Ryan)
+
+The zip from `python scripts/package.py` (`dist/SocialWheel-<version>.zip`) is
+already in the shape CurseForge expects: one `SocialWheel/` folder with the TOC
+inside, no extra wrapper folder, and no executables or development files.
+
+1. Check that the `socialwheel` project name is free on CurseForge (still unchecked).
+2. Create the project: name **SocialWheel**, the summary and description above,
+   license **MIT**, category as in the platform table.
+3. Upload the zip:
+   - **Game version:** Forever 1.60.1 only.
+   - **Release type:** **Beta** while the version ends in `-rc.N`. Use **Release**
+     only after the remaining items in `docs/VALIDATION.md` pass and the version
+     is bumped to a plain number (for example `0.1.0`).
+   - **Changelog:** paste the matching `CHANGELOG.md` section.
+4. Keep the AI-art disclosure line in the description. CurseForge had no
+   published AI-content rule as of 2026-11-08, but several other platforms
+   require disclosure, so stating it up front is the safe default.
+5. After CurseForge approves the project, add its URL to `README.md` and
+   `## X-Curse-Project-ID:` to the TOC (see "Adding real URLs later").
 
 ## Release checklist
 
