@@ -1,0 +1,16 @@
+dist/
+backups/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Local-only artifacts
+art/briefs/logs/*.log
+art/source/round1/

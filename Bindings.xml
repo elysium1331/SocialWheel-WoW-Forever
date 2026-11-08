@@ -1,0 +1,7 @@
+<Bindings>
+	<!-- runOnUp lets the optional hold-and-release mode see the key release.
+	     Click mode ignores the "up" state. No key is assigned by default. -->
+	<Binding name="SOCIALWHEEL_OPEN" runOnUp="true" category="ADDONS">
+		SocialWheel.OnBinding(keystate)
+	</Binding>
+</Bindings>

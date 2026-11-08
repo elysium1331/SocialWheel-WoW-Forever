@@ -1,0 +1,22 @@
+## Interface: 16001
+## Title: SocialWheel
+## Notes: A six-slot radial wheel for performing built-in emotes from one key binding.
+## Author: Ryan Novak
+## Version: 0.1.0-rc.3
+## Category: Chat & Communication
+## IconTexture: Interface\AddOns\SocialWheel\Media\Icons\_generic.tga
+## SavedVariablesPerCharacter: SocialWheelCharDB
+## AddonCompartmentFunc: SocialWheel_OnAddonCompartmentClick
+## X-License: MIT
+## X-Verified-Client: WoW Forever 1.60.1.70862
+
+Locales\enUS.lua
+Compat.lua
+WheelMath.lua
+Database.lua
+CatalogData.lua
+Catalog.lua
+Icons.lua
+Core.lua
+Wheel.lua
+Settings.lua
