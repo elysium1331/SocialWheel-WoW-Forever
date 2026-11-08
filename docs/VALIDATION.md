@@ -73,6 +73,9 @@ Reported by Ryan for 0.1.0-rc.2 (screenshot):
 Reported by Ryan for 0.1.0-rc.3:
 - [x] Everything works in game after a plain `/reload`, including the new original icons.
 
+Reported by Ryan for 0.1.0-rc.4 and 0.1.0-rc.5:
+- [x] Everything checks out in game after `/reload`: Elysium branding, the renamed folder, icons and key binding.
+
 Still pending (run on rc.5):
 
 Do these on 1.60.1.70862 with `/console scriptErrors 1` enabled. Record pass or
@@ -102,8 +105,8 @@ fail and the build number.
 22. [ ] Shift+Right-click on the open wheel closes it (no emote) and opens the configuration window.
 23. [ ] The one-time chat tip appears once per character and not after the next `/reload`.
 25. [x] rc.3 original icons render sharp and uncropped in the wheel, picker and catalog, with the round slot showing each whole symbol, and the AddOns list shows the speech-bubble icon.
-27. [ ] rc.5 folder rename: only `Elysium_SocialWheel` exists in AddOns, it loads with the key binding intact, it sits alone (not nested) under the Elysium heading, and icons render from the new path.
-26. [ ] rc.4 branding: Esc > AddOns shows an "Elysium" heading containing "[Elysium] SocialWheel", and Options > AddOns and the config window use the same title.
+27. [x] rc.5 folder rename: only `Elysium_SocialWheel` exists in AddOns, it loads with the key binding intact, it sits alone (not nested) under the Elysium heading, and icons render from the new path.
+26. [x] rc.4 branding: Esc > AddOns shows an "Elysium" heading containing "[Elysium] SocialWheel", and Options > AddOns and the config window use the same title.
 24. [x] New icons (Hello greeting figure, Thank handshake, Wave raised hand, Point arrow, Laugh grin, Cheer firework) render with no question marks.
 
 ## 4. Local installation performed
