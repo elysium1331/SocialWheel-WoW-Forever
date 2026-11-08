@@ -38,7 +38,7 @@ and state in the PR which ones you ran. Do not describe untested behavior as tes
 - Chat output goes through `ns.Notify`, which limits how often each message can print.
 - Changing the saved-settings shape: bump `Database.SCHEMA_VERSION` and add a
   migration plus a test.
-- Releasing: change the version only in the TOC (`## Version:`), then update
+- Releasing: change the version only in the TOC (`Elysium_SocialWheel.toc`, `## Version:`), then update
   `CHANGELOG.md`, `README.md` and `docs/DISTRIBUTION.md`. `package.py` fails if
   these files disagree.
 

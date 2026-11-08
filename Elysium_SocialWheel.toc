@@ -2,9 +2,10 @@
 ## Title: [Elysium] SocialWheel
 ## Notes: A six-slot radial wheel for performing built-in emotes from one key binding.
 ## Author: Ryan Novak (elysium1331)
-## Version: 0.1.0-rc.4
+## Version: 0.1.0-rc.5
 ## Category: Elysium
-## IconTexture: Interface\AddOns\SocialWheel\Media\Icons\_generic.tga
+## Group: Elysium_SocialWheel
+## IconTexture: Interface\AddOns\Elysium_SocialWheel\Media\Icons\_generic.tga
 ## SavedVariablesPerCharacter: SocialWheelCharDB
 ## AddonCompartmentFunc: SocialWheel_OnAddonCompartmentClick
 ## X-License: MIT

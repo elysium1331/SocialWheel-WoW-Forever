@@ -5,7 +5,7 @@ Part of the **Elysium** addon collection for WoW Forever by
 
 Pick an emote from a six-slot wheel with one key, without typing a command.
 
-**Release:** 0.1.0-rc.4 (release candidate, partly tested in game; see
+**Release:** 0.1.0-rc.5 (release candidate, partly tested in game; see
 [docs/VALIDATION.md](docs/VALIDATION.md)).
 
 SocialWheel is an unofficial community addon. Blizzard Entertainment did not
@@ -40,12 +40,13 @@ lives in `Compat.lua`.
 
 ## Installation
 
-1. Download `SocialWheel-<version>.zip` from the
+1. Download `Elysium_SocialWheel-<version>.zip` from the
    [Releases page](https://github.com/elysium1331/SocialWheel-WoW-Forever/releases). Don't use GitHub's green
    **Code > Download ZIP** button: that gives you the source code, not an
    installable addon.
 2. Extract it into `World of Warcraft\_forever_\Interface\AddOns\`. The result
-   should be `...\AddOns\SocialWheel\SocialWheel.toc`.
+   should be `...\AddOns\Elysium_SocialWheel\Elysium_SocialWheel.toc`. If you have an older `SocialWheel`
+   folder from 0.1.0-rc.4 or earlier, delete it.
 3. Run `/reload` (or restart the game). Check that SocialWheel is enabled under
    **Esc > AddOns**.
 4. Bind a key under **Options > Keybindings > AddOns > Open SocialWheel**.
@@ -124,9 +125,9 @@ no other addon already uses it.
 
 ## Uninstall
 
-1. Delete `World of Warcraft\_forever_\Interface\AddOns\SocialWheel`.
+1. Delete `World of Warcraft\_forever_\Interface\AddOns\Elysium_SocialWheel` (and `SocialWheel`, if present from an older version).
 2. Optionally, delete the saved settings
-   `WTF\Account\<account>\<realm>\<character>\SavedVariables\SocialWheel.lua`
+   `WTF\Account\<account>\<realm>\<character>\SavedVariables\Elysium_SocialWheel.lua`
    (one file per character).
 3. Any key you bound to "Open SocialWheel" becomes unused. You can rebind it in
    Options > Keybindings.

@@ -18,7 +18,7 @@ jobs:
       - run: python scripts/check.py
       - name: Check tag matches TOC version
         run: |
-          v=$(sed -n 's/^## Version: *//p' SocialWheel.toc | tr -d '\r')
+          v=$(sed -n 's/^## Version: *//p' Elysium_SocialWheel.toc | tr -d '\r')
           test "v$v" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME} != v$v"; exit 1; }
       - run: python scripts/package.py
       - uses: actions/upload-artifact@v4

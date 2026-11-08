@@ -4,6 +4,14 @@ All notable user-facing changes. Format: [Keep a Changelog](https://keepachangel
 Versions follow [Semantic Versioning](https://semver.org/). The saved-settings schema
 version is tracked separately (currently schema 1).
 
+## [0.1.0-rc.5] - 2026-11-08
+
+### Changed
+- The addon folder is now `Elysium_SocialWheel` (it was `SocialWheel`), matching the
+  Elysium branding. **Upgrading:** delete the old `SocialWheel` folder from
+  AddOns. Your key binding carries over. Slot choices and options start from
+  defaults, because the game stores saved settings under the folder name.
+
 ## [0.1.0-rc.4] - 2026-11-08
 
 ### Changed

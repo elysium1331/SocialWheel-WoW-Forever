@@ -5,13 +5,15 @@
 #   powershell -NoProfile -ExecutionPolicy Bypass -File scripts\install.ps1 [-WowPath "D:\Games\World of Warcraft"]
 #
 # Finds the game via Battle.net's install records, the Windows uninstall registry,
-# and common folders. Touches only <WoW>\_forever_\Interface\AddOns\SocialWheel.
+# and common folders. Touches only <WoW>\_forever_\Interface\AddOns\Elysium_SocialWheel
+# and, once, the pre-0.1.0-rc.5 folder name SocialWheel (backed up, then removed).
 # An existing SocialWheel folder is copied to .\backups\ first.
 param([string]$WowPath)
 
 $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
-$Addon = 'SocialWheel'
+$Addon = 'Elysium_SocialWheel'
+$LegacyFolders = @('SocialWheel')
 $Flavor = '_forever_'
 
 function Get-Version {
@@ -64,6 +66,17 @@ if (-not (Test-Path $addons)) {
 
 if (Get-Process -Name Wow -ErrorAction SilentlyContinue) {
     Write-Host "Note: WoW is running. Type /reload in game to load the new files (restart the game if a TOC change does not show up)."
+}
+
+foreach ($legacy in $LegacyFolders) {
+    $old = Join-Path $addons $legacy
+    if (Test-Path (Join-Path $old "$legacy.toc")) {
+        $backup = Join-Path $Root ("backups\$legacy-" + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+        New-Item -ItemType Directory -Path (Split-Path $backup) -Force | Out-Null
+        Copy-Item $old $backup -Recurse
+        Remove-Item $old -Recurse -Force
+        Write-Host "Removed old folder name $legacy (backup: $backup)"
+    }
 }
 
 $target = Join-Path $addons $Addon

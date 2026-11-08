@@ -23,18 +23,18 @@ local ICON = "Interface\\Icons\\"
 -- fails the build when a listed file is missing.
 -- Provenance and license: docs/icon-manifest.json and THIRD_PARTY_NOTICES.md.
 Icons.CUSTOM = {
-	HELLO = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\hello.tga",
-	THANK = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\thank.tga",
-	WAVE = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\wave.tga",
-	POINT = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\point.tga",
-	LAUGH = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\laugh.tga",
-	CHEER = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\cheer.tga",
+	HELLO = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\hello.tga",
+	THANK = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\thank.tga",
+	WAVE = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\wave.tga",
+	POINT = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\point.tga",
+	LAUGH = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\laugh.tga",
+	CHEER = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\cheer.tga",
 }
 Icons.CUSTOM_FALLBACKS = {
-	generic = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\_generic.tga",
-	EMOTES = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\_category_emotes.tga",
-	VOICE = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\_category_voice.tga",
-	TEXT = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\_generic.tga",
+	generic = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\_generic.tga",
+	EMOTES = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\_category_emotes.tga",
+	VOICE = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\_category_voice.tga",
+	TEXT = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\_generic.tga",
 }
 
 -- Per-emote placeholders (first existing path wins; later entries are older

@@ -134,6 +134,11 @@ local function RegisterSlash()
 end
 
 local function OnPlayerLogin()
+	if not ns.db then
+		-- Our ADDON_LOADED was not seen (should not happen); load settings now.
+		eventFrame:UnregisterEvent("ADDON_LOADED")
+		OnAddonLoaded()
+	end
 	Catalog.Initialize()
 	-- Report slots whose saved emote this client does not provide (kept, not deleted).
 	for i = 1, Database.SLOT_COUNT do

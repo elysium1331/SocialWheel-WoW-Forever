@@ -50,7 +50,7 @@ def main():
         ap.error("no art keys given")
     for key in keys:
         out = convert(key, args.size)
-        print(f'\tTOKEN = "Interface\\\\AddOns\\\\SocialWheel\\\\Media\\\\Icons\\\\{out.name}",  -- {out.relative_to(ROOT).as_posix()}')
+        print(f'\tTOKEN = "Interface\\\\AddOns\\\\Elysium_SocialWheel\\\\Media\\\\Icons\\\\{out.name}",  -- {out.relative_to(ROOT).as_posix()}')
     return 0
 
 

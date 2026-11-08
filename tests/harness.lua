@@ -10,7 +10,7 @@ function H.load(relPath, ns)
 	if not chunk then
 		error(err)
 	end
-	chunk("SocialWheel", ns)
+	chunk("Elysium_SocialWheel", ns)
 	return ns
 end
 

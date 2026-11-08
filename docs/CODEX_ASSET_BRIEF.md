@@ -115,4 +115,4 @@ image generation" with model/version if known), `date`, `license`, `notes`.
 - TGA must be 32-bit with straight (non-premultiplied) alpha. Keep fully
   transparent pixels black or neutral to avoid fringes. Test against the dark
   slot.
-- File paths in Lua use `Interface\\AddOns\\SocialWheel\\Media\\Icons\\<file>.tga`.
+- File paths in Lua use `Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\<file>.tga`.

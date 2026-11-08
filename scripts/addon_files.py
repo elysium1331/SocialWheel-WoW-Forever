@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ADDON = "SocialWheel"
+ADDON = "Elysium_SocialWheel"
 TOC = ROOT / f"{ADDON}.toc"
 
 # Explicit inclusion rules for the installable zip (in addition to TOC-listed files).
@@ -42,7 +42,7 @@ def toc_files() -> list:
 def custom_media_refs() -> list:
     """Runtime media paths referenced by Icons.CUSTOM / CUSTOM_FALLBACKS."""
     text = (ROOT / "Icons.lua").read_text(encoding="utf-8")
-    refs = re.findall(r'Interface\\\\AddOns\\\\SocialWheel\\\\([^"]+)"', text)
+    refs = re.findall(r'Interface\\\\AddOns\\\\' + re.escape(ADDON) + r'\\\\([^"]+)"', text)
     return [r.replace("\\\\", "/") for r in refs]
 
 

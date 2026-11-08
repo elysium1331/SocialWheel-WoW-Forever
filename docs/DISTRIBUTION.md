@@ -13,7 +13,8 @@ below only once they are real.
   private server (2016-2017). Ryan decided on 2026-11-08 to keep the brand anyway.
 - **Proposed public name:** [Elysium] SocialWheel (suggested CurseForge slug:
   `elysium-socialwheel`)
-- **Folder / TOC name:** `SocialWheel`
+- **Folder / TOC name:** `Elysium_SocialWheel` (since 0.1.0-rc.5; earlier builds used `SocialWheel`).
+  Every Elysium addon uses `Elysium_<Name>` and pins `## Group:` to its own folder name.
 - **Name check (2026-11-08, not legal clearance):**
   - Wago Addons: `addons.wago.io/addons/socialwheel` returned 404 (no listing found).
   - GitHub: the only repository match was an unrelated website project (`socialwheels`).
@@ -57,7 +58,7 @@ Extract the zip into `World of Warcraft\_forever_\Interface\AddOns\`, bind
 
 ## Supported game version
 
-- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.1.0-rc.4**.
+- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.1.0-rc.5**.
 - Do not tag Retail, Classic Era, Anniversary or any other flavor until it has
   been tested there.
 
@@ -68,10 +69,10 @@ Extract the zip into `World of Warcraft\_forever_\Interface\AddOns\`, bind
 | CurseForge | Community guides report a "Forever" game flavor with game version 1.60.1. Not verified first-hand. | Choose the Forever flavor and version 1.60.1 only. Suggested category: *Chat & Communication* (alternative: *Roleplay*). |
 | Wago Addons | Guides report a Forever flavor. Not verified first-hand. | Choose the Forever flavor only. Suggested category: *Chat & Communication* / *Social*. |
 | WoWInterface | No Forever support found. | If there is no Forever category, don't label the addon as another flavor. Wait, or link to GitHub Releases. |
-| GitHub Releases ([repo](https://github.com/elysium1331/SocialWheel-WoW-Forever)) | Not flavor-specific. | Attach `dist/SocialWheel-<version>.zip` by hand and paste the CHANGELOG section. |
+| GitHub Releases ([repo](https://github.com/elysium1331/SocialWheel-WoW-Forever)) | Not flavor-specific. | Attach `dist/Elysium_SocialWheel-<version>.zip` by hand and paste the CHANGELOG section. |
 
 Packaging: the zip is built locally by `scripts/package.py` and contains
-`SocialWheel/SocialWheel.toc` exactly one folder deep. No `.pkgmeta` or
+`Elysium_SocialWheel/Elysium_SocialWheel.toc` exactly one folder deep. No `.pkgmeta` or
 `release.sh` automation is included. Add one only after checking that platform's
 current packager documentation.
 
@@ -90,8 +91,8 @@ Use a neutral UI scale and crop personal names or chat if needed.
 
 ## CurseForge upload (manual, done by Ryan)
 
-The zip from `python scripts/package.py` (`dist/SocialWheel-<version>.zip`) is
-already in the shape CurseForge expects: one `SocialWheel/` folder with the TOC
+The zip from `python scripts/package.py` (`dist/Elysium_SocialWheel-<version>.zip`) is
+already in the shape CurseForge expects: one `Elysium_SocialWheel/` folder with the TOC
 inside, no extra wrapper folder, and no executables or development files.
 
 1. Check that the `elysium-socialwheel` slug and the name "[Elysium] SocialWheel" are free on CurseForge (still unchecked).
@@ -113,7 +114,7 @@ inside, no extra wrapper folder, and no executables or development files.
 
 1. All of docs/VALIDATION.md "In-game checks" passed on the target build. Record
    the build number.
-2. Set the version in `SocialWheel.toc` (`## Version:`) and update `CHANGELOG.md`,
+2. Set the version in `Elysium_SocialWheel.toc` (`## Version:`) and update `CHANGELOG.md`,
    `README.md` and this file.
 3. `python scripts/check.py` and `python scripts/package.py` both pass.
 4. Install the built zip into a clean AddOns folder and do a smoke test.

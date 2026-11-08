@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate and build the installable SocialWheel release zip (stdlib only).
 
-  python scripts/package.py                 # validate + build dist/SocialWheel-<version>.zip
+  python scripts/package.py                 # validate + build dist/Elysium_SocialWheel-<version>.zip
   python scripts/package.py --check         # validate only
   python scripts/package.py --install DIR   # build, then install into an AddOns folder
                                             # (an existing SocialWheel folder is backed up
@@ -22,6 +22,7 @@ import addon_files as af  # noqa: E402
 
 ROOT = af.ROOT
 ADDON = af.ADDON
+LEGACY_FOLDERS = ["SocialWheel"]  # folder name before 0.1.0-rc.5
 FIXED_DATE = (2026, 1, 1, 0, 0, 0)  # deterministic zip timestamps
 
 EXCLUDED_PATTERNS = [
@@ -84,7 +85,7 @@ def validate_sources(errors):
                 fail(errors, f"{rel}: single backslash in texture path near {m.group(0)!r}")
 
     icon = af.toc_field("IconTexture")
-    prefix = "Interface\\AddOns\\SocialWheel\\"
+    prefix = "Interface\\AddOns\\" + ADDON + "\\"
     if icon.startswith(prefix):
         rel_icon = icon[len(prefix):].replace("\\", "/")
         if rel_icon not in af.custom_media_refs():
@@ -119,7 +120,7 @@ def validate_zip(path: Path, errors):
     with zipfile.ZipFile(path) as z:
         names = z.namelist()
         if f"{ADDON}/{ADDON}.toc" not in names:
-            fail(errors, "zip: TOC is not at SocialWheel/SocialWheel.toc")
+            fail(errors, f"zip: TOC is not at {ADDON}/{ADDON}.toc")
         tocs = [n for n in names if n.lower().endswith(".toc")]
         for t in tocs:
             if t.count("/") != 1:
@@ -152,14 +153,17 @@ def validate_zip(path: Path, errors):
 def install(zip_path: Path, addons_dir: Path):
     if not addons_dir.is_dir() or addons_dir.name != "AddOns":
         raise SystemExit(f"not an AddOns folder: {addons_dir}")
+    backup_root = ROOT / "backups"
+    # The current folder, plus folder names used by earlier releases, so only one copy remains.
+    for name in [ADDON] + LEGACY_FOLDERS:
+        folder = addons_dir / name
+        if folder.exists() and (name == ADDON or (folder / f"{name}.toc").is_file()):
+            backup_root.mkdir(exist_ok=True)
+            backup = backup_root / f"{name}-{time.strftime('%Y%m%d-%H%M%S')}"
+            shutil.copytree(folder, backup)
+            shutil.rmtree(folder)
+            print(f"backed up and removed {folder} -> {backup}")
     target = addons_dir / ADDON
-    if target.exists():
-        backup_root = ROOT / "backups"
-        backup_root.mkdir(exist_ok=True)
-        backup = backup_root / f"{ADDON}-{time.strftime('%Y%m%d-%H%M%S')}"
-        shutil.copytree(target, backup)
-        shutil.rmtree(target)
-        print(f"backed up existing {target} -> {backup}")
     with zipfile.ZipFile(zip_path) as z:
         for n in z.namelist():
             if not n.startswith(f"{ADDON}/") or ".." in n:

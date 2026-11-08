@@ -4,7 +4,7 @@ local I = ns.Icons
 local test, eq, truthy = H.test, H.eq, H.truthy
 
 local P = "Interface\\Icons\\"
-local MEDIA = "Interface\\AddOns\\SocialWheel\\Media\\Icons\\"
+local MEDIA = "Interface\\AddOns\\Elysium_SocialWheel\\Media\\Icons\\"
 
 local function withFiles(set)
 	I.ClearCache()
