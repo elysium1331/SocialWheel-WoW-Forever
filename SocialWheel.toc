@@ -8,6 +8,7 @@
 ## SavedVariablesPerCharacter: SocialWheelCharDB
 ## AddonCompartmentFunc: SocialWheel_OnAddonCompartmentClick
 ## X-License: MIT
+## X-Website: https://github.com/elysium1331/SocialWheel-WoW-Forever
 ## X-Verified-Client: WoW Forever 1.60.1.70862
 
 Locales\enUS.lua

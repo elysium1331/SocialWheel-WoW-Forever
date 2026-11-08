@@ -62,7 +62,7 @@ Extract the zip into `World of Warcraft\_forever_\Interface\AddOns\`, bind
 | CurseForge | Community guides report a "Forever" game flavor with game version 1.60.1. Not verified first-hand. | Choose the Forever flavor and version 1.60.1 only. Suggested category: *Chat & Communication* (alternative: *Roleplay*). |
 | Wago Addons | Guides report a Forever flavor. Not verified first-hand. | Choose the Forever flavor only. Suggested category: *Chat & Communication* / *Social*. |
 | WoWInterface | No Forever support found. | If there is no Forever category, don't label the addon as another flavor. Wait, or link to GitHub Releases. |
-| GitHub Releases | Not flavor-specific. | Attach `dist/SocialWheel-<version>.zip` by hand and paste the CHANGELOG section. |
+| GitHub Releases ([repo](https://github.com/elysium1331/SocialWheel-WoW-Forever)) | Not flavor-specific. | Attach `dist/SocialWheel-<version>.zip` by hand and paste the CHANGELOG section. |
 
 Packaging: the zip is built locally by `scripts/package.py` and contains
 `SocialWheel/SocialWheel.toc` exactly one folder deep. No `.pkgmeta` or

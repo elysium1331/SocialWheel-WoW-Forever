@@ -37,7 +37,10 @@ lives in `Compat.lua`.
 
 ## Installation
 
-1. Download `SocialWheel-<version>.zip`.
+1. Download `SocialWheel-<version>.zip` from the
+   [Releases page](https://github.com/elysium1331/SocialWheel-WoW-Forever/releases). Don't use GitHub's green
+   **Code > Download ZIP** button: that gives you the source code, not an
+   installable addon.
 2. Extract it into `World of Warcraft\_forever_\Interface\AddOns\`. The result
    should be `...\AddOns\SocialWheel\SocialWheel.toc`.
 3. Run `/reload` (or restart the game). Check that SocialWheel is enabled under
@@ -112,7 +115,8 @@ no other addon already uses it.
 - **A slot says "Unavailable":** your saved emote doesn't exist on this client.
   Assign a different one.
 - **Lua errors:** enable them with `/console scriptErrors 1`, reproduce the
-  problem, and include the error text in a bug report along with the output of
+  problem, and include the error text in a
+  [bug report](https://github.com/elysium1331/SocialWheel-WoW-Forever/issues/new/choose) along with the output of
   `/socialwheel version`.
 
 ## Uninstall
