@@ -58,7 +58,7 @@ Extract the zip into `World of Warcraft\_forever_\Interface\AddOns\`, bind
 
 ## Supported game version
 
-- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.1.0-rc.5**.
+- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.1.0**.
 - Do not tag Retail, Classic Era, Anniversary or any other flavor until it has
   been tested there.
 
@@ -123,10 +123,11 @@ inside, no extra wrapper folder, and no executables or development files.
 
 ## Known limitations (copy into listings)
 
-See the README "Known limitations" section. The main points: this is a release
-candidate that has not been tested in game; Hold-and-release is experimental;
-icons are placeholders; voice and animation details are "Unknown" for emotes
-outside Blizzard's two menus; the game may block emotes in restricted contexts.
+See the README "Known limitations" section. The main points: tested in game on
+WoW Forever 1.60.1 with an English client; emotes other than the six defaults
+still use built-in game icons; voice and animation details are "Unknown" for
+emotes outside Blizzard's two menus; the game may block emotes in restricted
+contexts.
 
 ## Adding real URLs later
 

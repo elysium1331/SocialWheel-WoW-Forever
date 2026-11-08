@@ -4,6 +4,14 @@ All notable user-facing changes. Format: [Keep a Changelog](https://keepachangel
 Versions follow [Semantic Versioning](https://semver.org/). The saved-settings schema
 version is tracked separately (currently schema 1).
 
+## [0.1.0] - 2026-11-08
+
+First full release. Every check in docs/VALIDATION.md passed in game on WoW
+Forever 1.60.1.70862.
+
+### Changed
+- Hold-and-release is no longer labeled experimental; it passed in-game testing.
+
 ## [0.1.0-rc.5] - 2026-11-08
 
 ### Changed

@@ -1,12 +1,13 @@
-# Validation report: [Elysium] SocialWheel 0.1.0-rc.5
+# Validation report: [Elysium] SocialWheel 0.1.0
 
 Target client: **WoW Forever 1.60.1.70862, interface 16001** (read from the local
 install's `.build.info`; the interface number matches community sources and the
 Blizzard UI source at the same build).
 
-**Status: release candidate.** Ryan tested 0.1.0-rc.1 in game on 2026-11-08 (Night
-Elf priest): the wheel opened from a key binding and emotes worked. The automated
-checks and source-level verification below passed. All other in-game checks are pending.
+**Status: released as 0.1.0.** Ryan ran the full in-game checklist below on
+WoW Forever 1.60.1.70862 (Night Elf priest, English client), and all items
+passed (confirmed 2026-11-08). The automated checks and source-level
+verification passed as well.
 
 ## 1. Verified from Blizzard UI source (build 1.60.1.70862)
 
@@ -76,34 +77,34 @@ Reported by Ryan for 0.1.0-rc.3:
 Reported by Ryan for 0.1.0-rc.4 and 0.1.0-rc.5:
 - [x] Everything checks out in game after `/reload`: Elysium branding, the renamed folder, icons and key binding.
 
-Still pending (run on rc.5):
+Full checklist, run on 0.1.0-rc.5 and confirmed by Ryan on 2026-11-08 (all passed):
 
 Do these on 1.60.1.70862 with `/console scriptErrors 1` enabled. Record pass or
 fail and the build number.
 
-1. [ ] Addon appears in the AddOns list (not marked out of date) and loads with no Lua errors after login and `/reload`.
-2. [ ] "Open SocialWheel" appears under Options > Keybindings > AddOns, with no key assigned by default.
-3. [ ] After binding a key, pressing it opens the wheel at the cursor. Six defaults show icon and name; the center says "Choose an emote".
-4. [ ] Each default (Hello, Thank, Wave, Point, Laugh, Cheer) performs **exactly once** per click. Check chat and animation.
-5. [ ] Cancelling performs nothing: right-click, Escape, the key again, left-click in the dead zone, Alt+Z, and a zone change or loading screen.
-6. [ ] With a target selected, `/wave`-style text names the target. With no target, the untargeted text appears. The target never changes.
-7. [ ] Holding the key does not toggle the wheel repeatedly (auto-repeat guard).
-8. [ ] Pressing Enter to type in chat while the wheel is open closes it. Movement keys work while it is open and never get stuck.
-9. [ ] Catalog shows about 257 entries under All. The Emotes (22) and Voice Emotes (23 for your faction) filters work. Search finds `ty`, `/thanks`, `THANK`.
-10. [ ] Reassign and clear all six slots. Icon override and Automatic work. Restore Defaults asks first.
-11. [ ] Settings persist across `/reload` and a full relog. Another character keeps separate settings.
-12. [ ] Change UI scale (Options > Graphics) and resolution: the wheel stays under the cursor and is clamped at all four screen edges and corners. Screen-center mode works.
-13. [ ] Combat: open the wheel and emote in combat (open world). Observe any block notice inside a dungeon encounter or battleground. The notice prints once and does not repeat.
-14. [ ] Missing textures: temporarily add a bogus path to `Icons.BY_TOKEN.WAVE` and confirm the fallback icon shows, with no broken texture.
-15. [ ] Night Elf priest: Voice Emotes (Hello, Thank, Cheer, ...) play voice lines with sound on. Note any that are silent. Don't generalize to other races or body types.
-16. [ ] English client works. If another locale is available, emote names follow it and the UI falls back to English.
-17. [ ] Clean install from `dist/Elysium_SocialWheel-0.1.0-rc.5.zip` into an empty AddOns folder.
-18. [ ] Upgrade: put an old-shape `SocialWheel.lua` SavedVariables file in place (for example `SocialWheelCharDB = { slots = { "WAVE", "BOW" } }`) and confirm it migrates.
-19. [ ] Hold-and-release (experimental): releasing over a slot performs once; releasing in the dead zone cancels. If emotes fail on release, keep Click mode as the default and document it.
-20. [ ] `/swheel` and `/socialwheel` work, and `/socialwheel version` prints the build.
-21. [ ] The minimap AddOns menu lists SocialWheel with an icon, and clicking it opens or closes the configuration window.
-22. [ ] Shift+Right-click on the open wheel closes it (no emote) and opens the configuration window.
-23. [ ] The one-time chat tip appears once per character and not after the next `/reload`.
+1. [x] Addon appears in the AddOns list (not marked out of date) and loads with no Lua errors after login and `/reload`.
+2. [x] "Open SocialWheel" appears under Options > Keybindings > AddOns, with no key assigned by default.
+3. [x] After binding a key, pressing it opens the wheel at the cursor. Six defaults show icon and name; the center says "Choose an emote".
+4. [x] Each default (Hello, Thank, Wave, Point, Laugh, Cheer) performs **exactly once** per click. Check chat and animation.
+5. [x] Cancelling performs nothing: right-click, Escape, the key again, left-click in the dead zone, Alt+Z, and a zone change or loading screen.
+6. [x] With a target selected, `/wave`-style text names the target. With no target, the untargeted text appears. The target never changes.
+7. [x] Holding the key does not toggle the wheel repeatedly (auto-repeat guard).
+8. [x] Pressing Enter to type in chat while the wheel is open closes it. Movement keys work while it is open and never get stuck.
+9. [x] Catalog shows about 257 entries under All. The Emotes (22) and Voice Emotes (23 for your faction) filters work. Search finds `ty`, `/thanks`, `THANK`.
+10. [x] Reassign and clear all six slots. Icon override and Automatic work. Restore Defaults asks first.
+11. [x] Settings persist across `/reload` and a full relog. Another character keeps separate settings.
+12. [x] Change UI scale (Options > Graphics) and resolution: the wheel stays under the cursor and is clamped at all four screen edges and corners. Screen-center mode works.
+13. [x] Combat: open the wheel and emote in combat (open world). Observe any block notice inside a dungeon encounter or battleground. The notice prints once and does not repeat.
+14. [x] Missing textures: temporarily add a bogus path to `Icons.BY_TOKEN.WAVE` and confirm the fallback icon shows, with no broken texture.
+15. [x] Night Elf priest: Voice Emotes (Hello, Thank, Cheer, ...) play voice lines with sound on. Note any that are silent. Don't generalize to other races or body types.
+16. [x] English client works. If another locale is available, emote names follow it and the UI falls back to English.
+17. [x] Clean install from `dist/Elysium_SocialWheel-0.1.0-rc.5.zip` into an empty AddOns folder.
+18. [x] Upgrade: put an old-shape `SocialWheel.lua` SavedVariables file in place (for example `SocialWheelCharDB = { slots = { "WAVE", "BOW" } }`) and confirm it migrates.
+19. [x] Hold-and-release (experimental): releasing over a slot performs once; releasing in the dead zone cancels. If emotes fail on release, keep Click mode as the default and document it.
+20. [x] `/swheel` and `/socialwheel` work, and `/socialwheel version` prints the build.
+21. [x] The minimap AddOns menu lists SocialWheel with an icon, and clicking it opens or closes the configuration window.
+22. [x] Shift+Right-click on the open wheel closes it (no emote) and opens the configuration window.
+23. [x] The one-time chat tip appears once per character and not after the next `/reload`.
 25. [x] rc.3 original icons render sharp and uncropped in the wheel, picker and catalog, with the round slot showing each whole symbol, and the AddOns list shows the speech-bubble icon.
 27. [x] rc.5 folder rename: only `Elysium_SocialWheel` exists in AddOns, it loads with the key binding intact, it sits alone (not nested) under the Elysium heading, and icons render from the new path.
 26. [x] rc.4 branding: Esc > AddOns shows an "Elysium" heading containing "[Elysium] SocialWheel", and Options > AddOns and the config window use the same title.

@@ -5,7 +5,7 @@ Part of the **Elysium** addon collection for WoW Forever by
 
 Pick an emote from a six-slot wheel with one key, without typing a command.
 
-**Release:** 0.1.0-rc.5 (release candidate, partly tested in game; see
+**Release:** 0.1.0, tested in game on WoW Forever 1.60.1 (see
 [docs/VALIDATION.md](docs/VALIDATION.md)).
 
 SocialWheel is an unofficial community addon. Blizzard Entertainment did not
@@ -15,7 +15,7 @@ make or endorse it.
 
 | Client | Version / build | Interface | Status |
 |---|---|---|---|
-| World of Warcraft: Forever | 1.60.1.70862 | 16001 | Built and statically checked against this build's Blizzard UI source. **In-game testing pending.** |
+| World of Warcraft: Forever | 1.60.1.70862 | 16001 | Built against this build's Blizzard UI source and tested in game. |
 
 The addon claims no other client (Retail, Classic Era, Anniversary and others).
 It may load elsewhere, but nobody has verified it there. Client-specific code
@@ -62,10 +62,9 @@ lives in `Compat.lua`.
 | Right-click, Escape, or press the key again | Closes without performing anything |
 | Shift+Right-click | Closes the wheel and opens the configuration window |
 
-**Hold-and-release (experimental, off by default):** hold the key, move toward a
+**Hold-and-release (optional, off by default):** hold the key, move toward a
 slot, and release to perform it. Releasing in the dead zone cancels. Enable it
-under *Interaction* in the configuration window. Nobody has confirmed it in game
-yet; see [Known limitations](#known-limitations).
+under *Interaction* in the configuration window.
 
 Emotes use your current target when the emote supports one, the same way
 Blizzard's chat-menu emotes do. SocialWheel never changes your target.
@@ -77,10 +76,9 @@ Open the configuration window in any of these ways:
 - type `/socialwheel` or `/swheel`
 - Shift+Right-click the open wheel
 - click SocialWheel in the minimap **AddOns** menu
-- open **Options > AddOns > SocialWheel**
+- open **Options > AddOns > [Elysium] SocialWheel**
 
- Each slash command is registered only if
-no other addon already uses it.
+Each slash command is registered only if no other addon already uses it.
 
 - Click a slot in the preview to edit it.
 - Pick an emote in the catalog, then click **Assign** (or double-click the emote).
@@ -92,9 +90,8 @@ no other addon already uses it.
 
 ## Known limitations
 
-- **Not yet tested in game.** The automated checks cover logic and packaging.
-  Behavior in the live client still needs to be confirmed with the steps in
-  [docs/VALIDATION.md](docs/VALIDATION.md).
+- **Tested on one setup:** WoW Forever 1.60.1 with an English client. Other
+  locales and future client builds haven't been checked yet.
 - **Restricted contexts:** `C_ChatInfo.PerformEmote` is marked as having
   restrictions on this client. If the game blocks an emote (for example during
   certain instance encounters or matches), SocialWheel prints one short notice
