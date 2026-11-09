@@ -120,3 +120,18 @@ fail and the build number.
 - rc.3 (with original art) was installed the same way.
 - rc.2 was installed with `Install-SocialWheel.cmd`. It detected the game folder from
   Battle.net's records and backed up the previous copy to `./backups/`.
+
+## 5. Version 0.2.0 (shared painted look): in-game checklist
+
+Ryan installed 0.2.0 on 2026-11-09 and reported that it looks good. [x] marks what
+that covers; items 4-5 were not reported separately (the controller, catalog and
+settings code is unchanged from 0.1.0).
+
+Automated: `scripts/check.py` 37/37 tests pass; a stub smoke run (open, highlight,
+perform, close, configuration window) passes; `scripts/package.py` passes.
+
+1. [x] The wheel shows the painted disc, gold rim, six slot rings, spokes, stars and hub; no green/black squares.
+2. [x] The six emote icons sit centered in their rings; the hovered slot glows and its name shows under the wheel, readable over bright scenery.
+3. [x] Empty and unavailable slots look dimmed; game-icon emotes (non-default picks) are cropped round.
+4. [ ] The configuration window's preview uses the new look; clicking a slot selects it and the slot numbers show.
+5. [ ] Everything from 0.1.0 still works (click and hold-and-release modes, closing, search, settings).

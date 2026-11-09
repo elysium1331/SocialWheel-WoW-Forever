@@ -40,20 +40,17 @@ def toc_files() -> list:
 
 
 def custom_media_refs() -> list:
-    """Runtime media paths referenced by Icons.CUSTOM / CUSTOM_FALLBACKS."""
-    text = (ROOT / "Icons.lua").read_text(encoding="utf-8")
+    """Runtime media paths referenced by Icons.lua (icons) and Art.lua (wheel frame)."""
+    text = "".join((ROOT / f).read_text(encoding="utf-8") for f in ("Icons.lua", "Art.lua"))
     refs = re.findall(r'Interface\\\\AddOns\\\\' + re.escape(ADDON) + r'\\\\([^"]+)"', text)
-    return [r.replace("\\\\", "/") for r in refs]
+    return list(dict.fromkeys(r.replace("\\\\", "/") for r in refs))
 
 
 def release_files() -> list:
     files = list(dict.fromkeys(EXTRA_RUNTIME + toc_files() + LEGAL + DOCS))
-    media = ROOT / MEDIA_DIR
-    if media.is_dir():
-        refs = set(custom_media_refs())
-        for p in sorted(media.iterdir()):
-            rel = p.relative_to(ROOT).as_posix()
-            # Ship only converted runtime textures that the code references.
-            if p.suffix.lower() in MEDIA_SUFFIXES and rel in refs:
-                files.append(rel)
+    # Ship only converted runtime textures that the code references.
+    for rel in custom_media_refs():
+        p = ROOT / rel
+        if p.is_file() and p.suffix.lower() in MEDIA_SUFFIXES and rel not in files:
+            files.append(rel)
     return files

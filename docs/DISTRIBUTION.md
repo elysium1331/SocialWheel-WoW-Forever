@@ -58,7 +58,7 @@ Extract the zip into `World of Warcraft\_forever_\Interface\AddOns\`, bind
 
 ## Supported game version
 
-- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.1.0**.
+- **WoW Forever 1.60.1 (build 70862), interface 16001**, release **0.2.0**.
 - Do not tag Retail, Classic Era, Anniversary or any other flavor until it has
   been tested there.
 

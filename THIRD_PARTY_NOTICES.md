@@ -20,6 +20,15 @@ World of Warcraft and Blizzard Entertainment are trademarks or registered
 trademarks of Blizzard Entertainment, Inc. SocialWheel is an unofficial
 community project that Blizzard has not endorsed.
 
+## Wheel frame art (Media/Wheel)
+
+`Media/Wheel/*.tga` (disc, slot ring, hub, spoke, star and glows) are shared with
+[Elysium] ProfessionWheel, by the same author and under the same MIT License.
+They were made on 2026-11-09 with OpenAI's image generation tool through Codex
+CLI and reviewed by hand; sources, briefs and the conversion script are in the
+ProfessionWheel repository (`art/wheel/`, `art/briefs/wheel-1.md`,
+`scripts/build_wheel_art.py`). No Blizzard or third-party artwork was used.
+
 ## Original artwork (Media/Icons)
 
 `Media/Icons/*.tga` are original icons created for SocialWheel on 2026-11-08 with

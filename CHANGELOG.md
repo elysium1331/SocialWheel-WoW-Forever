@@ -4,6 +4,17 @@ All notable user-facing changes. Format: [Keep a Changelog](https://keepachangel
 Versions follow [Semantic Versioning](https://semver.org/). The saved-settings schema
 version is tracked separately (currently schema 1).
 
+## [0.2.0] - 2026-11-09
+
+Shared painted look, checked in game on WoW Forever 1.60.1.70862.
+
+### Changed
+- The wheel is redrawn with the painted art shared with [Elysium] ProfessionWheel:
+  a dark disc with a hammered-gold rim, gold slot rings, spokes from a glowing
+  hub, and star accents between the slots. The configuration preview uses it too.
+- The highlighted emote's name now shows on a dark plate under the wheel instead
+  of in the center.
+
 ## [0.1.0] - 2026-11-08
 
 First full release. Every check in docs/VALIDATION.md passed in game on WoW

@@ -234,6 +234,7 @@ end
 local function IsBundled(path)
 	return path:sub(1, 17) == "Interface\\AddOns\\"
 end
+Icons.IsBundled = IsBundled
 
 -- Path for a curated key. Bundled files are used as-is (verified at package
 -- time); built-in names are checked like any other placeholder.
